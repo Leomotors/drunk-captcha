@@ -13,8 +13,10 @@ const config = {
     "plugin:prettier/recommended",
     "plugin:import/typescript",
     "plugin:solid/recommended",
+    "plugin:jsx-a11y/recommended",
   ],
   plugins: ["@typescript-eslint/eslint-plugin", "import"],
+  ignorePatterns: ["dist/**/*"],
   rules: {
     "prettier/prettier": "warn",
     "import/order": [
@@ -48,6 +50,7 @@ const config = {
     "import/no-cycle": "error",
     "prefer-const": "warn",
     "@typescript-eslint/no-namespace": "off",
+    eqeqeq: "warn",
   },
 };
 

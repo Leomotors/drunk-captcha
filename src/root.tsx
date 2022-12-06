@@ -35,6 +35,10 @@ export default function Root() {
           rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Inter:r,b&display=swap"
         />
+        <Link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans+Thai:r,b&display=swap"
+        />
       </Head>
       <Body>
         <Suspense>

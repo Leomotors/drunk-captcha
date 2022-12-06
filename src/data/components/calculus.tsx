@@ -1,5 +1,6 @@
 /* eslint-disable solid/no-innerhtml */
 
+import clsx from "clsx";
 import katex from "katex";
 import { Component, createSignal, For } from "solid-js";
 
@@ -40,13 +41,13 @@ export const Calculus: Component<CalculusProps> = (props) => {
             <>
               <input
                 type="text"
-                class="w-16 rounded border border-gray-500 p-2"
+                class={clsx("w-16", styles.input)}
                 value={answers()[index()] ?? ""}
                 onChange={(e) =>
                   setAnswers({ ...answers(), [index()]: e.currentTarget.value })
                 }
               />
-              {answer.term != "constants" && (
+              {answer.term !== "constants" && (
                 <span
                   class="text-2xl"
                   innerHTML={katex.renderToString(answer.term)}

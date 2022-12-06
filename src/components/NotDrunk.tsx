@@ -21,9 +21,8 @@ export const NotDrunk: Component<NotDrunkProps> = (props) => {
       {loading() ? (
         <Spinner />
       ) : (
-        <input
-          class="ml-2 mr-3 scale-[2]"
-          type="checkbox"
+        <button
+          class="mr-2 h-7 w-7 rounded-md border-2 border-neutral-500 transition-colors hover:border-neutral-600"
           onClick={() => {
             setLoading(true);
             setTimeout(() => {
