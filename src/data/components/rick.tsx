@@ -9,8 +9,8 @@ export const Rick: Component<QuestionProps> = (props) => {
 
   function onSubmit() {
     props.onComplete(
-      ["rickroll", "rickastley", "nevergonnagiveyouup"].includes(
-        input().toLowerCase().replaceAll(" ", "")
+      ["rickroll", "rickastley", "nevergonnagiveyouup"].some((kw) =>
+        input().toLowerCase().replaceAll(" ", "").includes(kw)
       )
     );
   }
